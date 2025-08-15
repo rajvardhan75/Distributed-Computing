@@ -10,6 +10,8 @@ const cors = require('cors');
 dotenv.config();
 
 const authRoutes = require('./routes/auth');
+const feedbackRoutes = require('./routes/feedback');           
+const userRoutes = require('./routes/users');   
 
 const app = express();
 
@@ -42,6 +44,8 @@ app.use(
 
 app.get('/api', (req, res) => res.send('API OK'));
 app.use('/api/auth', authRoutes);
+app.use('/api/feedback', feedbackRoutes);                     
+app.use('/api/users', userRoutes);  
 
 const PORT = process.env.PORT || 8000;
 
