@@ -28,7 +28,7 @@ export default function Dashboard() {
       {me ? (
         <>
           <p>Signed in as: <b>{me.name}</b> ({me.email})</p>
-          <pre style={{ background: '#f3f4f6', padding: 12, borderRadius: 8 }}>{JSON.stringify(me, null, 2)}</pre>
+          <pre style={{ background: '#f3f4f6', color:"black", padding: 12, borderRadius: 8 }}>{JSON.stringify(me, null, 2)}</pre>
           <button className="btn" onClick={logout}>Logout</button>
         </>
       ) : (
